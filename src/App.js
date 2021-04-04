@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Question from './components/Question';
+import Quiz from './components/Quiz';
 import quizQuestions from './api/quizQuestions';
 
 function App() {
@@ -53,13 +54,22 @@ function App() {
     return array;
   };
 
+  const handleAnswerSelected = (event) => {};
+
   console.log(question);
   console.log(answerOptions);
 
   return (
     <div className='app'>
       <h2>Pet Quiz</h2>
-      <Question content='What is your favorite pet?' />
+      <Quiz
+        answer={answer}
+        answerOptions={answerOptions}
+        questionId={questionId}
+        question={question}
+        questionTotal={quizQuestions.length}
+        onAnswerSelected={handleAnswerSelected}
+      />
     </div>
   );
 }
