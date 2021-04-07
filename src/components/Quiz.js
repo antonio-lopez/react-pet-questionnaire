@@ -25,11 +25,13 @@ function Quiz({
   }
   return (
     <div className='quiz'>
-      <QuestionCount counter={questionId} total={questionTotal} />
-      <Question content={question} />
-      <ul className='answerOptions'>
-        {answerOptions.map(renderAnswerOptions)}
-      </ul>
+      <div className='quizCard'>
+        <QuestionCount counter={questionId} total={questionTotal} />
+        <Question content={question} />
+        <ul className='answerOptions'>
+          {answerOptions.map(renderAnswerOptions)}
+        </ul>
+      </div>
     </div>
   );
 }

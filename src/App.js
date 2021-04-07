@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Quiz from './components/Quiz';
 import quizQuestions from './api/quizQuestions';
 import Result from './components/Result';
+// import doggo from './img/dog-peek-2.jpg';
+import doggo from './img/corgi-dog-smiling-wall.jpg';
 import './App.css';
 
 function App() {
@@ -56,7 +58,6 @@ function App() {
   };
 
   const handleAnswerSelected = (event) => {
-    console.log('CONSOLE EVENT TRGT:', event.currentTarget.value);
     setUserAnswer(event.currentTarget.value);
     if (questionId < quizQuestions.length) {
       // setTimeout(() => setNextQuestion(), 300);
@@ -128,8 +129,13 @@ function App() {
 
   return (
     <div className='app'>
-      <h2>Pet Quiz</h2>
-      {result ? renderResult() : renderQuiz()}
+      <div className='container'>
+        {/* <h1 className='quizTitle'>Pet Quiz</h1>
+        <div className='doggo'>
+          <img src={doggo} alt='' />
+        </div> */}
+        {result ? renderResult() : renderQuiz()}
+      </div>
     </div>
   );
 }
