@@ -104,14 +104,19 @@ function App() {
 
   const renderQuiz = () => {
     return (
-      <Quiz
-        answer={answer}
-        answerOptions={answerOptions}
-        questionId={questionId}
-        question={question}
-        questionTotal={quizQuestions.length}
-        onAnswerSelected={handleAnswerSelected}
-      />
+      <div className='container'>
+        {/* <div className='doggo'>
+          <img src={doggo} alt='' />
+        </div> */}
+        <Quiz
+          answer={answer}
+          answerOptions={answerOptions}
+          questionId={questionId}
+          question={question}
+          questionTotal={quizQuestions.length}
+          onAnswerSelected={handleAnswerSelected}
+        />
+      </div>
     );
   };
 
@@ -129,13 +134,15 @@ function App() {
 
   return (
     <div className='app'>
-      <div className='container'>
-        {/* <h1 className='quizTitle'>Pet Quiz</h1>
+      {/* <div className='container'>
+        <h1 className='quizTitle'>Pet Quiz</h1>
         <div className='doggo'>
           <img src={doggo} alt='' />
-        </div> */}
+        </div>
         {result ? renderResult() : renderQuiz()}
-      </div>
+      </div> */}
+
+      {result ? renderResult() : renderQuiz()}
     </div>
   );
 }

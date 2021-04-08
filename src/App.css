@@ -20,7 +20,8 @@ code {
 }
 
 body {
-  background: #eaf0ff;
+  /* background: #eaf0ff; */
+  background: #d3e9ff;
   font-family: sans-serif;
 }
 
@@ -28,13 +29,59 @@ ul {
   list-style-type: none;
 }
 
+/* img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+} */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  overflow: auto;
+  /* overflow: auto; */
   padding: 0 40px;
   /* background-color: #fff; */
 }
+
+/* .quizTitle {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+
+.dogContainer {
+  /* background-color: #333; */
+  /* margin: 0 auto; */
+  /* overflow: auto; */
+  /* padding: 0 40px; */
+  /* transform: translateY(70%); */
+  /* max-width: auto; */
+  /* background-color: #fff; */
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+}
+.dogContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  transform: translateY(30%);
+}
+/* .dogContainer img {
+  transform: translateY(-39%);
+} */
+
+/* .quiz {
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+  height: 100px;
+} */
+
+/* .quiz img {
+  width: 100%;
+} */
 
 .quizCard {
   background-color: #fff;
@@ -97,4 +144,19 @@ ul {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .dogContainer {
+    height: 150px;
+  }
+
+  .quizCard {
+    height: auto;
+    margin: 0;
+  }
 }
